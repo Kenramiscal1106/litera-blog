@@ -5,6 +5,10 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
+<svelte:head>
+	<title>Blog | Critera</title>
+</svelte:head>
+
 <BlogDisplay />
 <!-- 
 <p>
