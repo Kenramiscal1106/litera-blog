@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
+	import { nav } from './drawer.svelte';
 </script>
 
-<nav class="bg-primary-500 fixed left-0 top-0 w-full p-3">
+<nav class="fixed left-0 top-0 w-full bg-primary-500 p-3">
 	<div class="left-0h-full absolute top-0"></div>
 	<div class="m-auto flex max-w-2xl items-center justify-between">
 		<div>
@@ -45,7 +46,10 @@
 		</div>
 		<!-- Menu buttons -->
 		<div>
-			<button class="hover:bg-primary-400 active:bg-primary-300 p-1">
+			<button
+				class="p-1 hover:bg-primary-400 active:bg-primary-300"
+				on:click={() => nav.openMenu()}
+			>
 				<Hamburger />
 			</button>
 		</div>
