@@ -3,9 +3,9 @@
 	import { nav } from './drawer.svelte';
 </script>
 
-<nav class="fixed left-0 top-0 w-full bg-primary-500 p-3 sm:p-4">
+<nav class="fixed left-0 top-0 z-30 w-full bg-primary-500 p-3 sm:p-4">
 	<div class="left-0h-full absolute top-0"></div>
-	<div class="m-auto flex max-w-2xl items-center justify-between">
+	<div class="m-auto flex max-w-3xl items-center justify-between">
 		<div>
 			<svg
 				width="117"
