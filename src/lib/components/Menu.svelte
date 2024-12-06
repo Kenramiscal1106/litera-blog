@@ -7,7 +7,7 @@
 {#if nav.menuOpen}
 	<div
 		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-300 px-4 py-5 sm:hidden"
-		transition:fly={{ duration: 175, x: -300 }}
+		transition:fly={{ duration: 225, x: -300 }}
 	>
 		<div class="flex justify-between">
 			<div>
