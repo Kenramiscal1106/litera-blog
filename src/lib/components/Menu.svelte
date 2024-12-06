@@ -6,7 +6,7 @@
 
 {#if nav.menuOpen}
 	<div
-		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-300 p-4 sm:hidden"
+		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-300 px-4 py-5 sm:hidden"
 		transition:fly={{ duration: 175, x: -300 }}
 	>
 		<div class="flex justify-between">
@@ -60,7 +60,7 @@
 			</button>
 		</div>
 		<div class="mt-5 flex flex-col gap-2">
-			<MenuItem href="/" active={false}>
+			<MenuItem href="/">
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -73,7 +73,7 @@
 				</div>
 				<div>Home</div>
 			</MenuItem>
-			<MenuItem href="/blog" active={true}>
+			<MenuItem href="/blog">
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -88,7 +88,7 @@
 				</div>
 				<div>Blog</div>
 			</MenuItem>
-			<MenuItem href="authors" active={false}>
+			<MenuItem href="/authors">
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -121,7 +121,7 @@
 				</div>
 				<div>Authors</div>
 			</MenuItem>
-			<MenuItem href="feedback-and-suggestions" active={false}>
+			<MenuItem href="/feedback-and-suggestions">
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
