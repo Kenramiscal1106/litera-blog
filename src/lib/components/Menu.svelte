@@ -2,7 +2,6 @@
 	import { fly, slide } from 'svelte/transition';
 	import { nav } from './drawer.svelte';
 	import MenuItem from './MenuItem.svelte';
-	import Cloud from '$lib/icons/Cloud.svelte';
 </script>
 
 {#if nav.menuOpen}
@@ -63,14 +62,7 @@
 		<div class="mt-5 flex flex-col gap-2">
 			<MenuItem href="/" active={false}>
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						class="fill-primary-500"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M11.4697 4.43201C11.7626 4.13912 12.2374 4.13912 12.5303 4.43201L21.2197 13.1214C21.5126 13.4142 21.9874 13.4142 22.2803 13.1214C22.5732 12.8285 22.5732 12.3536 22.2803 12.0607L13.591 3.37135C12.7123 2.49267 11.2877 2.49267 10.409 3.37135L1.71967 12.0607C1.42678 12.3536 1.42678 12.8285 1.71967 13.1214C2.01256 13.4142 2.48744 13.4142 2.78033 13.1214L11.4697 4.43201Z"
 						/>
@@ -83,13 +75,7 @@
 			</MenuItem>
 			<MenuItem href="/blog" active={true}>
 				<div>
-					<svg
-						width="24"
-						height="25"
-						class="fill-primary-900"
-						viewBox="0 0 24 25"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
 							clip-rule="evenodd"
@@ -104,13 +90,7 @@
 			</MenuItem>
 			<MenuItem href="authors" active={false}>
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						class="fill-primary-500"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
 							clip-rule="evenodd"
@@ -143,7 +123,13 @@
 			</MenuItem>
 			<MenuItem href="feedback-and-suggestions" active={false}>
 				<div>
-					<Cloud className="fill-primary-500" />
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M4.84836 3.36204C7.18302 3.01876 9.57113 2.84103 12.0003 2.84103C14.4292 2.84103 16.8171 3.01873 19.1516 3.36195C21.1299 3.6528 22.5 5.38548 22.5 7.33159V13.3505C22.5 15.2966 21.1299 17.0293 19.1516 17.3201C18.0054 17.4886 16.8464 17.6173 15.6759 17.7045C15.5514 17.7138 15.4431 17.7785 15.379 17.8746L12.624 22.0071C12.4849 22.2157 12.2508 22.341 12 22.341C11.7492 22.341 11.5151 22.2157 11.376 22.0071L8.62092 17.8745C8.5569 17.7785 8.44853 17.7137 8.32408 17.7045C7.15358 17.6172 5.99452 17.4885 4.84836 17.32C2.87004 17.0291 1.5 15.2965 1.5 13.3504V7.33168C1.5 5.38558 2.87004 3.65292 4.84836 3.36204ZM6.75 8.84103C6.75 8.42682 7.08579 8.09103 7.5 8.09103H16.5C16.9142 8.09103 17.25 8.42682 17.25 8.84103C17.25 9.25525 16.9142 9.59103 16.5 9.59103H7.5C7.08579 9.59103 6.75 9.25525 6.75 8.84103ZM7.5 11.091C7.08579 11.091 6.75 11.4268 6.75 11.841C6.75 12.2552 7.08579 12.591 7.5 12.591H12C12.4142 12.591 12.75 12.2552 12.75 11.841C12.75 11.4268 12.4142 11.091 12 11.091H7.5Z"
+						/>
+					</svg>
 				</div>
 				<div>Feedback and suggestions</div>
 			</MenuItem>

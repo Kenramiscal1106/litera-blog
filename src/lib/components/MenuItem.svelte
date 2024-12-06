@@ -14,8 +14,10 @@
 	} = $props();
 </script>
 
-<a {href} class={`block px-4 py-3 ${active ? 'bg-primary-500' : ''}`}>
-	<div class={`${active ? 'text-warm-100 font-bold' : ''} flex gap-3 text-xl`}>
+<a {href} class={`block rounded-md px-4 py-3 ${active ? 'bg-primary-500' : ''}`}>
+	<div
+		class={`${active ? 'fill-primary-900 font-bold text-warm-100' : ''} flex items-center gap-3 fill-primary-500 text-[1rem] text-lg`}
+	>
 		{@render children()}
 	</div>
 </a>
