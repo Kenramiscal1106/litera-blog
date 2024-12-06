@@ -16,7 +16,9 @@
 			officiis debitis iusto quam ut accusantium enim et.
 		</div>
 		<div class="flex items-center gap-2 text-base text-warm-700">
-			<div class="aspect-square w-8 bg-gradient-to-tr from-primary-900 to-primary-600"></div>
+			<div
+				class="aspect-square w-8 rounded-sm bg-gradient-to-tr from-primary-900 to-primary-600"
+			></div>
 			<div>By Ken Ramiscal</div>
 		</div>
 	</div>
