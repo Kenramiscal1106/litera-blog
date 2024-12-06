@@ -3,7 +3,7 @@
 	import { nav } from './drawer.svelte';
 </script>
 
-<nav class="fixed left-0 top-0 w-full bg-primary-500 p-3">
+<nav class="fixed left-0 top-0 w-full bg-primary-500 p-3 sm:p-4">
 	<div class="left-0h-full absolute top-0"></div>
 	<div class="m-auto flex max-w-2xl items-center justify-between">
 		<div>
@@ -45,9 +45,10 @@
 			</svg>
 		</div>
 		<!-- Menu buttons -->
-		<div>
+		<div class="flex">
+			<div class="hidden sm:flex"></div>
 			<button
-				class="p-1 hover:bg-primary-400 active:bg-primary-300"
+				class="p-1 hover:bg-primary-400 active:bg-primary-300 sm:hidden"
 				on:click={() => nav.openMenu()}
 			>
 				<Hamburger />
