@@ -15,7 +15,7 @@
 </script>
 
 <a {href} class={`block px-4 py-3 ${active ? 'bg-primary-500' : ''}`}>
-	<div class={`${active ? 'font-bold text-neutral-900' : ''} flex gap-3 text-xl`}>
+	<div class={`${active ? 'text-warm-100 font-bold' : ''} flex gap-3 text-xl`}>
 		{@render children()}
 	</div>
 </a>
