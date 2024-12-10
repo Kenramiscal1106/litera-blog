@@ -10,6 +10,10 @@
 </svelte:head>
 
 <BlogDisplay />
+<BlogDisplay />
+<BlogDisplay />
+<BlogDisplay />
+<BlogDisplay />
 <!-- 
 <p>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ea minus maxime explicabo eum
