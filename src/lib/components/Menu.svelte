@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly, slide } from 'svelte/transition';
-	import { nav } from './drawer.svelte';
+	import { modal, nav } from './store.svelte';
 	import MenuItem from './MenuItem.svelte';
 </script>
 
@@ -15,11 +15,7 @@
 					width="117"
 					height="26"
 					viewBox="0 0 117 26"
-<<<<<<< HEAD
-					class="fill-primary-300"
-=======
-					class="fill-primary-700"
->>>>>>> 0e4dcf427c83bc0dae7c39ebbd106ab4d977d5a3
+					class="fill-primary-800"
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
@@ -66,13 +62,7 @@
 		<div class="mt-5 flex flex-col gap-2">
 			<MenuItem href="/">
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						class="fill-primary-500"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M11.4697 4.43201C11.7626 4.13912 12.2374 4.13912 12.5303 4.43201L21.2197 13.1214C21.5126 13.4142 21.9874 13.4142 22.2803 13.1214C22.5732 12.8285 22.5732 12.3536 22.2803 12.0607L13.591 3.37135C12.7123 2.49267 11.2877 2.49267 10.409 3.37135L1.71967 12.0607C1.42678 12.3536 1.42678 12.8285 1.71967 13.1214C2.01256 13.4142 2.48744 13.4142 2.78033 13.1214L11.4697 4.43201Z"
 						/>
@@ -83,7 +73,7 @@
 				</div>
 				<div>Home</div>
 			</MenuItem>
-			<MenuItem href="/blog">
+			<MenuItem href="/blog" delay={50}>
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -98,15 +88,9 @@
 				</div>
 				<div>Blog</div>
 			</MenuItem>
-			<MenuItem href="/authors">
+			<MenuItem href="/authors" delay={100}>
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						class="fill-primary-500 group-hover:fill-primary-600"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
 							clip-rule="evenodd"
@@ -137,15 +121,9 @@
 				</div>
 				<div>Authors</div>
 			</MenuItem>
-			<MenuItem href="/feedback-and-suggestions">
+			<MenuItem delay={200} type="button" onclick={() => modal.openModal()}>
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						class="fill-primary-500"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
 							clip-rule="evenodd"
