@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
-	import { nav } from './drawer.svelte';
+	import { nav } from './store.svelte';
 </script>
 
 <nav class="fixed left-0 top-0 z-30 w-full bg-primary-300 px-5 py-4 sm:px-5 sm:py-4">
