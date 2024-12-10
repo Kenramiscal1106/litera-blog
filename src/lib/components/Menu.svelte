@@ -6,8 +6,8 @@
 
 {#if nav.menuOpen}
 	<div
-		class="fixed left-0 top-0 z-40 h-full w-full bg-primary-700 p-4 sm:hidden"
-		transition:fly={{ duration: 175, x: -300 }}
+		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-300 px-4 py-5 sm:hidden"
+		transition:fly={{ duration: 225, x: -300 }}
 	>
 		<div class="flex justify-between">
 			<div>
@@ -15,7 +15,11 @@
 					width="117"
 					height="26"
 					viewBox="0 0 117 26"
+<<<<<<< HEAD
 					class="fill-primary-300"
+=======
+					class="fill-primary-700"
+>>>>>>> 0e4dcf427c83bc0dae7c39ebbd106ab4d977d5a3
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
@@ -51,7 +55,7 @@
 				>
 					<path
 						d="M7.5 23.2955L22.5 8.29553M7.5 8.29553L22.5 23.2955"
-						class="stroke-neutral-200"
+						class="stroke-warm-800"
 						stroke-width="1.875"
 						stroke-linecap="round"
 						stroke-linejoin="round"
@@ -60,7 +64,7 @@
 			</button>
 		</div>
 		<div class="mt-5 flex flex-col gap-2">
-			<MenuItem href="/" active={false}>
+			<MenuItem href="/">
 				<div>
 					<svg
 						width="24"
@@ -79,30 +83,22 @@
 				</div>
 				<div>Home</div>
 			</MenuItem>
-			<MenuItem href="/blog" active={true}>
+			<MenuItem href="/blog">
 				<div>
-					<svg
-						width="24"
-						height="25"
-						viewBox="0 0 24 25"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
+					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
 							clip-rule="evenodd"
 							d="M4.125 3.59103C3.08947 3.59103 2.25 4.4305 2.25 5.46603V18.591C2.25 20.2479 3.59315 21.591 5.25 21.591H20.25C18.5931 21.591 17.25 20.2479 17.25 18.591V5.46603C17.25 4.4305 16.4105 3.59103 15.375 3.59103H4.125ZM12 10.341C11.5858 10.341 11.25 10.6768 11.25 11.091C11.25 11.5052 11.5858 11.841 12 11.841H13.5C13.9142 11.841 14.25 11.5052 14.25 11.091C14.25 10.6768 13.9142 10.341 13.5 10.341H12ZM11.25 8.09103C11.25 7.67682 11.5858 7.34103 12 7.34103H13.5C13.9142 7.34103 14.25 7.67682 14.25 8.09103C14.25 8.50525 13.9142 8.84103 13.5 8.84103H12C11.5858 8.84103 11.25 8.50525 11.25 8.09103ZM6 13.341C5.58579 13.341 5.25 13.6768 5.25 14.091C5.25 14.5052 5.58579 14.841 6 14.841H13.5C13.9142 14.841 14.25 14.5052 14.25 14.091C14.25 13.6768 13.9142 13.341 13.5 13.341H6ZM5.25 17.091C5.25 16.6768 5.58579 16.341 6 16.341H13.5C13.9142 16.341 14.25 16.6768 14.25 17.091C14.25 17.5052 13.9142 17.841 13.5 17.841H6C5.58579 17.841 5.25 17.5052 5.25 17.091ZM6 7.34103C5.58579 7.34103 5.25 7.67682 5.25 8.09103V11.091C5.25 11.5052 5.58579 11.841 6 11.841H9C9.41421 11.841 9.75 11.5052 9.75 11.091V8.09103C9.75 7.67682 9.41421 7.34103 9 7.34103H6Z"
-							class="fill-primary-100"
 						/>
 						<path
 							d="M18.75 7.34103H20.625C21.2463 7.34103 21.75 7.84471 21.75 8.46603V18.591C21.75 19.4195 21.0784 20.091 20.25 20.091C19.4216 20.091 18.75 19.4195 18.75 18.591V7.34103Z"
-							class="fill-primary-100"
 						/>
 					</svg>
 				</div>
 				<div>Blog</div>
 			</MenuItem>
-			<MenuItem href="authors" active={false}>
+			<MenuItem href="/authors">
 				<div>
 					<svg
 						width="24"
@@ -141,7 +137,7 @@
 				</div>
 				<div>Authors</div>
 			</MenuItem>
-			<MenuItem href="feedback-and-suggestions" active={false}>
+			<MenuItem href="/feedback-and-suggestions">
 				<div>
 					<svg
 						width="24"

@@ -1,21 +1,24 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import type { Snippet, SvelteComponent } from 'svelte';
-
 	const {
 		href,
 		// type,
-		active,
 		children
 	}: {
 		href: string;
 		// type: 'nav' | 'menu';
-		active: boolean;
 		children: Snippet;
 	} = $props();
 </script>
 
-<a {href} class={`block px-4 py-3 ${active ? 'bg-primary-500' : ''}`}>
-	<div class={`${active ? 'font-bold text-neutral-900' : ''} flex gap-3 text-xl`}>
+<a
+	{href}
+	class={`block rounded-md px-4 py-3 transition-colors duration-150 ${$page.route.id === href ? 'bg-primary-500' : ''}`}
+>
+	<div
+		class={`${$page.route.id === href ? 'fill-primary-900 font-bold text-warm-100' : ''} flex items-center gap-3 fill-primary-500 text-[1rem] text-lg`}
+	>
 		{@render children()}
 	</div>
 </a>

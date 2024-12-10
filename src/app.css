@@ -4,7 +4,10 @@
 
 @layer base {
 	body {
-		@apply bg-neutral-800;
+		@apply bg-warm-200;
+	}
+	:root {
+		font-size:16px;
 	}
 	*,
 	*::before,
