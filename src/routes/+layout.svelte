@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { nav } from '$lib/components/drawer.svelte';
+	import { nav } from '$lib/components/store.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import '../app.css';
+	import FeedbackModal from '$lib/components/FeedbackModal.svelte';
 	let { children } = $props();
 	afterNavigate(() => {
 		nav.closeMenu();
@@ -15,3 +16,4 @@
 	{@render children()}
 </main>
 <Menu />
+<FeedbackModal />
