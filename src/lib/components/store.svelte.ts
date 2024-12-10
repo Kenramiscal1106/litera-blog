@@ -9,7 +9,7 @@ export const nav = $state({
 });
 
 export const modal = $state({
-	open: true,
+	open: false,
 	openModal() {
 		this.open = true;
 	},

@@ -42,7 +42,7 @@
 		<div class="flex">
 			<div class="hidden sm:flex"></div>
 			<button
-				class="p-1 hover:bg-primary-400 active:bg-primary-300 sm:hidden"
+				class="fill-primary-900 p-1 hover:bg-primary-400 active:bg-primary-300 sm:hidden"
 				on:click={() => nav.openMenu()}
 			>
 				<Hamburger />
