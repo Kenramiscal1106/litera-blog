@@ -7,7 +7,7 @@
 	<div class="left-0h-full absolute top-0"></div>
 	<div class="m-auto flex max-w-3xl items-center justify-between">
 		<div>
-			<a href="/home" aria-label="home button">
+			<a href="/" aria-label="home button">
 				<svg
 					width="117"
 					height="26"
