@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { fly, slide } from 'svelte/transition';
 	import { modal, nav } from './store.svelte';
+	import { fly } from 'svelte/transition';
 	import MenuItem from './MenuItem.svelte';
 </script>
 
