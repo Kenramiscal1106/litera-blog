@@ -77,7 +77,7 @@
 				</div>
 				<div>Blog</div>
 			</MenuItem>
-			<MenuItem href="/authors" delay={100}>
+			<MenuItem href="/contributors" delay={100}>
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -108,7 +108,7 @@
 						/>
 					</svg>
 				</div>
-				<div>Authors</div>
+				<div>Contributors</div>
 			</MenuItem>
 			<MenuItem delay={200} type="button" onclick={() => modal.openModal()}>
 				<div>
