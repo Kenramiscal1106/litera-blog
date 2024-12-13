@@ -12,16 +12,20 @@
 		transition:fade={{ duration: 175 }}
 	>
 		<div
-			class=" w-full max-w-sm rounded-[.5rem] bg-warm-100 p-5"
+			class=" w-full max-w-md rounded-[.5rem] bg-warm-100 p-5"
 			transition:scale={{ duration: 175, start: 0.5 }}
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
 		>
-			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<!-- svelte-ignore a11y_no_static_element_interactions -->
-			<div class="text-2xl font-bold text-warm-800">Help us improve!</div>
-			<p class="text-warm-600">How would you rate your website experience?</p>
+			<form>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div class="flex flex-col gap-2">
+					<div class="text-2xl font-bold text-warm-800">Help us improve!</div>
+					<div class="text-warm-600">How would you rate your website experience?</div>
+				</div>
+			</form>
 		</div>
 	</div>
 {/if}
