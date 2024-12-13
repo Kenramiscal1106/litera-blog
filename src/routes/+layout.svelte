@@ -6,6 +6,9 @@
 	import '../app.css';
 	import FeedbackModal from '$lib/components/FeedbackModal.svelte';
 	import Loader from '$lib/components/Loader.svelte';
+	import { page } from '$app/stores';
+	import { fly } from 'svelte/transition';
+	import { quintInOut } from 'svelte/easing';
 	let { children } = $props();
 	let loading = $state();
 	afterNavigate(() => {
@@ -32,7 +35,11 @@
 {/if}
 <Navbar />
 <main class="mx-auto mt-[4rem] max-w-2xl px-6 py-3">
-	{@render children()}
+	{#key $page.route.id}
+		<div in:fly={{ duration: 400, y: 50, easing: quintInOut }}>
+			{@render children()}
+		</div>
+	{/key}
 </main>
 <Menu />
 <FeedbackModal />
