@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
-	import { nav } from './store.svelte';
+	import Navlinks from './Navlinks.svelte';
+	import { modal, nav } from './store.svelte';
 </script>
 
-<nav class="fixed left-0 top-0 z-30 w-full bg-primary-300 px-5 py-4 sm:px-5 sm:py-4">
+<nav class="fixed left-0 top-0 z-30 w-full bg-primary-200 px-5 py-4 shadow-md sm:px-5 sm:py-4">
 	<div class="left-0h-full absolute top-0"></div>
 	<div class="m-auto flex max-w-3xl items-center justify-between">
 		<div>
@@ -42,10 +43,19 @@
 		</div>
 		<!-- Menu buttons -->
 		<div class="flex">
-			<div class="hidden sm:flex"></div>
+			<div class="hidden gap-6 text-lg sm:flex">
+				<Navlinks href="/blog">Blog</Navlinks>
+				<Navlinks href="/contributors">Contributors</Navlinks>
+				<button
+					class="text-primary-700 hover:text-primary-800"
+					onclick={() => {
+						modal.openModal();
+					}}>Give Feedback</button
+				>
+			</div>
 			<button
 				class="fill-primary-900 p-1 hover:bg-primary-400 active:bg-primary-300 sm:hidden"
-				on:click={() => nav.openMenu()}
+				onclick={() => nav.openMenu()}
 			>
 				<Hamburger />
 			</button>

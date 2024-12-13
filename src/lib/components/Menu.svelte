@@ -120,7 +120,7 @@
 						/>
 					</svg>
 				</div>
-				<div>Feedback and suggestions</div>
+				<div>Give Feedback</div>
 			</MenuItem>
 		</div>
 	</div>
