@@ -1,1 +1,8 @@
-<h1>Hello, World</h1>
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
+	console.log(data);
+</script>
+
+{@render data.content()}

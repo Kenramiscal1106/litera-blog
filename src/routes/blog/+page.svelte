@@ -8,12 +8,9 @@
 <svelte:head>
 	<title>Blog | Critera</title>
 </svelte:head>
-
-<BlogDisplay />
-<BlogDisplay />
-<BlogDisplay />
-<BlogDisplay />
-<BlogDisplay />
+{#each data.posts as post}
+	<BlogDisplay {...post} />
+{/each}
 <!-- 
 <p>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ea minus maxime explicabo eum
