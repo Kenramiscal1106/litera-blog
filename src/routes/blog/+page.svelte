@@ -8,9 +8,11 @@
 <svelte:head>
 	<title>Blog | Critera</title>
 </svelte:head>
-{#each data.posts as post}
-	<BlogDisplay {...post} />
-{/each}
+<div class="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
+	{#each data.posts as post}
+		<BlogDisplay {...post} />
+	{/each}
+</div>
 <!-- 
 <p>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ea minus maxime explicabo eum
