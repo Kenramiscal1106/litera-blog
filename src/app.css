@@ -35,4 +35,7 @@
 	p {
 		@apply text-base;
 	}
+	hr {
+		@apply border-2 border-warm-300 my-3;
+	}
 }
