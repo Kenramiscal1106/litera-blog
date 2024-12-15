@@ -6,7 +6,7 @@
 
 {#if nav.menuOpen}
 	<div
-		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-300 px-4 py-5 sm:hidden"
+		class="fixed left-0 top-0 z-40 h-full w-full gap-5 bg-primary-100 px-4 py-5 sm:hidden"
 		transition:fly={{ duration: 225, x: -300 }}
 	>
 		<div class="flex justify-between">
@@ -61,7 +61,7 @@
 				</svg>
 			</button>
 		</div>
-		<div class="mt-5 flex flex-col gap-2">
+		<div class="mt-5 flex flex-col gap-3">
 			<MenuItem href="/blog" delay={50}>
 				<div>
 					<svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
