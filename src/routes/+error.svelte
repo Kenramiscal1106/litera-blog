@@ -14,6 +14,10 @@
 		{#if $page.status === 404}
 			<p class="text-lg">It appears we do not know what you're looking for</p>
 			<p class="text-lg">Perhaps it is still a Work in Progress</p>
+		{:else if $page.status === 500}
+			<p class="text-lg">
+				It appears our server had a problem with the request. Please try again later
+			</p>
 		{/if}
 	</div>
 </div>
