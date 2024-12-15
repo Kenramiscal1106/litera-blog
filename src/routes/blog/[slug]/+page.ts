@@ -1,17 +1,23 @@
 import { error } from "@sveltejs/kit";
 import type { PageLoad } from "./$types";
+import type { Snippet } from "svelte";
 
 export const load: PageLoad = async ({params}) => {
   try {
-		const post = await import(`../../../posts/${params.slug}.md`)
-    console.log(post.default)
+		const post = await import(`../../../posts/${params.slug}.md`) as {
+			default:Snippet,
+			metadata:{
+				title: string,
+				author: string,
+				date:string
+			}
+		}
 
 		return {
 			content: post.default,
 			meta: post.metadata
 		}
 	} catch (e) {
-    console.log("errored")
 		error(404, `Could not find ${params.slug}`)
 	}
 };

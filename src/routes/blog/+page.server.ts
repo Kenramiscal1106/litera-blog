@@ -5,7 +5,7 @@ export const load = (async () => {
     const paths = import.meta.glob('/src/posts/*.md', { eager: true })
     for (const key in paths) {
         
-        const file = paths[key]
+        const file = paths[key];
         const slug = key.replace(".md", "").replace("/src/posts/", "")
         if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
