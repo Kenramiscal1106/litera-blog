@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { afterNavigate, beforeNavigate, onNavigate } from '$app/navigation';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { nav, modal } from '$lib/components/store.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
@@ -19,9 +19,6 @@
 		loading = true;
 	});
 	$effect(() => {
-		if (nav.menuOpen) {
-			console.log(window.scrollY);
-		}
 		if (nav.menuOpen || modal.open) {
 			document.body.style.overflow = 'hidden';
 		} else {
@@ -34,7 +31,7 @@
 	<Loader />
 {/if}
 <Navbar />
-<main class="mx-auto mt-[4rem] max-w-2xl px-6 py-3">
+<main class="mx-auto mt-[4.75rem] px-6 py-3">
 	{#key $page.route.id}
 		<div in:fly={{ duration: 400, y: 50, easing: quintInOut }}>
 			{@render children()}
