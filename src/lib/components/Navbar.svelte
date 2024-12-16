@@ -1,7 +1,20 @@
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
+	import { onMount } from 'svelte';
 	import Navlinks from './Navlinks.svelte';
 	import { modal, nav } from './store.svelte';
+	let progPercent = $state(0);
+	function scrollFunction() {
+		const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		progPercent = winScroll / height;
+	}
+	onMount(() => {
+		window.addEventListener('scroll', scrollFunction);
+		return () => {
+			window.removeEventListener('scroll', scrollFunction);
+		};
+	});
 </script>
 
 <nav class="fixed left-0 top-0 z-30 w-full bg-primary-100 px-5 py-4 shadow-md sm:px-5 sm:py-4">
@@ -61,4 +74,9 @@
 			</button>
 		</div>
 	</div>
+	{#if nav.hasScrollIndicator}
+		<div class="absolute bottom-0 left-0 h-1 w-full translate-y-full bg-green-100">
+			<div class="absolute left-0 top-0 h-1 bg-green-500" style="width:{progPercent * 100}%"></div>
+		</div>
+	{/if}
 </nav>

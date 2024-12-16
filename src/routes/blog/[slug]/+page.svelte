@@ -1,8 +1,15 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import { nav } from '$lib/components/store.svelte';
 
 	let { data }: { data: PageData } = $props();
+	let progPercent = $state(0);
+	onMount(() => {
+		nav.enableScrollIndicator();
+		return () => nav.disableScrollIndicator();
+	});
 </script>
 
 <div class="mx-auto max-w-med">
@@ -23,3 +30,10 @@
 		{@render data.content()}
 	</div>
 </div>
+
+<!-- 
+const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+	 -->
