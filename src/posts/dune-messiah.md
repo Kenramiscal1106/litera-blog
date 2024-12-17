@@ -1,6 +1,6 @@
 ---
-title: Criticism of Dune Messiah
-date: '2023-4-14'
+title: Dune Messiah
+date: '2024-12-17'
 author: Ken Ramiscal
 ---
 The story of heroes can encourage us to believe in goodness. However, it should not be mistaken that they are people who are completely devoid of flaws or mistakes. The second book of the Dune series titled “Dune Messiah” continues the heroic story of Paul Atreides, better known as Muad’Dib. This sequel conveys a message of how destructive religious propaganda can be, and that there are no leaders that do not commit mistakes, even those who have special powers or prodigious abilities. It is a tragic story revealing the imperfections and the holes in the plan that Paul had put in place, which took a toll on his personal life, as well as his political standing as the Emperor of the known Universe.
