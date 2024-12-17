@@ -8,5 +8,9 @@
 
 <div class="m-auto max-w-med">
 	<h1>Feedbacks and suggestions</h1>
-	<Feedback />
+	<div class="mt-3 flex flex-col gap-3">
+		{#each data.feedback as feedback}
+			<Feedback {...feedback} />
+		{/each}
+	</div>
 </div>
