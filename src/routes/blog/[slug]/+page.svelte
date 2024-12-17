@@ -13,13 +13,24 @@
 </script>
 
 <div class="mx-auto max-w-med">
-	<div class="my-4">
+	<div class="my-4 flex flex-col gap-2">
 		<h1 class="text-warm-900">{data.meta.title}</h1>
 		<div class="text-sm text-warm-600">{data.meta.date} • 3 mins read</div>
-		<div class="flex gap-3">
-			<div>By {data.meta.author}</div>
+		<div class="flex items-center gap-3">
+			<img
+				src="{$page.url.origin}/images/authors/{data.meta.author
+					.toLowerCase()
+					.split(' ')
+					.join('-')}.png"
+				class="h-auto w-8 rounded-sm"
+				alt={data.meta.author}
+			/>
+			<div>
+				By <a href="/contributors/{data.meta.author.toLowerCase().split(' ').join('-')}"
+					>{data.meta.author}</a
+				>
+			</div>
 		</div>
-		<hr />
 	</div>
 	<img
 		src="{$page.url.origin}/images/{$page.params.slug}.png"

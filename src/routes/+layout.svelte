@@ -10,9 +10,11 @@
 	import { fly } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+
 	let { children } = $props();
 	let loading = $state();
 	let upperPart = $state(true);
+
 	afterNavigate(() => {
 		nav.closeMenu();
 		loading = false;
@@ -20,6 +22,7 @@
 	beforeNavigate(() => {
 		loading = true;
 	});
+
 	onMount(() => {
 		document.addEventListener('scroll', () => {
 			const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -30,6 +33,7 @@
 			}
 		});
 	});
+
 	$effect(() => {
 		if (nav.menuOpen || modal.open) {
 			document.body.style.overflow = 'hidden';
@@ -75,4 +79,4 @@
 	</button>
 {/if}
 <Menu />
-<FeedbackModal />
+<FeedbackModal action="/?/sendFeedback" />

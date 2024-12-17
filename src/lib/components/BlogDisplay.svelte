@@ -18,9 +18,14 @@
 				<div>{props.date} • 3 mins read</div>
 			</div>
 			<div class="flex items-center gap-2 text-base text-warm-700">
-				<div
+				<img
+					src="{$page.url.origin}/images/authors/{props.author
+						.toLowerCase()
+						.split(' ')
+						.join('-')}.png"
 					class="aspect-square w-8 rounded-sm bg-gradient-to-tr from-primary-900 to-primary-600"
-				></div>
+					alt={props.author}
+				/>
 				<div>By {props.author}</div>
 			</div>
 		</div>
