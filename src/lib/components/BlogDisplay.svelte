@@ -5,17 +5,19 @@
 	const props: Post = $props();
 </script>
 
-<a
-	href="/blog/{props.slug}"
-	class="overflow-hidden rounded-md bg-neutral-100 shadow-lg transition-all duration-200 hover:-translate-y-2 hover:shadow-xl"
->
+<article class="relative overflow-hidden rounded-md bg-neutral-100 shadow-lg">
+	<div class="aspect-video w-full bg-gradient-to-tr from-primary-300 to-primary-600"></div>
 	<img
-		class="aspect-video w-auto bg-gradient-to-tr from-primary-300 to-primary-600"
+		class="absolute left-0 top-0 aspect-video w-full"
 		src="{$page.url.origin}/images/{props.slug}.png"
 		alt={props.title}
 	/>
 	<div class="flex flex-col gap-2 px-5 py-6">
-		<h1 class="var-xs text-2xl text-primary-700 md:text-3xl">{props.title}</h1>
+		<h1
+			class="var-xs text-2xl text-primary-600 transition-colors duration-150 hover:text-primary-800 md:text-3xl"
+		>
+			<a href="/blog/{props.slug}">{props.title}</a>
+		</h1>
 		<div class="text-base text-neutral-600">
 			<div>{formatDate(props.date)} • 3 mins read</div>
 		</div>
@@ -28,7 +30,11 @@
 				class="aspect-square w-8 rounded-sm bg-gradient-to-tr from-primary-900 to-primary-600"
 				alt={props.author}
 			/>
-			<div>By {props.author}</div>
+			<div>
+				By <a href="/contributors#{props.author.toLowerCase().split(' ').join('-')}"
+					>{props.author}</a
+				>
+			</div>
 		</div>
 	</div>
-</a>
+</article>

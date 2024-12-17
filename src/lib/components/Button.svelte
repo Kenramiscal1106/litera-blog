@@ -15,7 +15,7 @@
 		onclick?: EventHandler;
 	} = $props();
 	const variantClasses = {
-		outline: 'border-neutral-200 text-primary-800',
+		outline: 'border-neutral-200 text-primary-800 hover:bg-neutral-200 active:bg-neutral-300',
 		fill: 'bg-primary-500 text-neutral-100',
 		text: 'text-primary-800'
 	};

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { fade, fly } from 'svelte/transition';
 
 	const props: {
 		name: string;
@@ -10,10 +9,11 @@
 </script>
 
 <article
-	class="overflow-hidden rounded-md bg-neutral-50 shadow-lg transition-all duration-200 hover:-translate-y-2 hover:shadow-xl"
+	class="overflow-hidden rounded-md bg-neutral-50 text-primary-100 shadow-lg transition-all duration-200 target:bg-primary-400 hover:-translate-y-2 hover:shadow-xl"
+	id={props.slug}
 >
 	<img
-		class="bg-gradient-to-tr from-primary-300 to-primary-600"
+		class="aspect-square w-full bg-gradient-to-tr from-primary-300 to-primary-600"
 		src="{$page.url.origin}/images/authors/{props.slug}.png"
 		alt={props.name}
 	/>

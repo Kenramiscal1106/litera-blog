@@ -9,7 +9,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="absolute left-0 top-0 z-50 flex h-[100lvh] w-screen items-center justify-center bg-neutral-900 bg-opacity-25 px-4"
+		class="fixed left-0 top-0 z-50 flex h-[100vh] w-screen items-center justify-center bg-neutral-900 bg-opacity-25 px-4"
 		onclick={() => modal.closeModal()}
 		transition:fade={{ duration: 175 }}
 	>
@@ -155,7 +155,7 @@
 						></textarea>
 					</div>
 				</div>
-				<div class="flex flex-col sm:flex-row">
+				<div class="flex flex-col gap-2 sm:flex-row">
 					<Button variant="fill" class="block w-full">Submit</Button>
 					<Button
 						variant="outline"
