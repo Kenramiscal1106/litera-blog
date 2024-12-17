@@ -202,14 +202,16 @@
 								/>
 							</svg>
 						</div>
-						<div class="text-center">
+						<div class="gap-3 text-center">
 							<h2>Your response has been recorded</h2>
 							<div>
 								<a class="underline" href="/feedback-and-suggestions"
 									>See what others say about our website</a
 								>
 							</div>
-							<Button variant="outline" class="w-full">Go back to current page</Button>
+							<Button variant="fill" class="w-full" onclick={() => modal.closeModal()}
+								>Go back to current page</Button
+							>
 						</div>
 					{/if}
 				</form>{/key}
