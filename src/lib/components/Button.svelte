@@ -6,12 +6,14 @@
 		children,
 		class: className,
 		type,
-		onclick
+		onclick,
+		disabled
 	}: {
 		class?: string;
 		variant: 'outline' | 'fill' | 'text';
 		children?: any;
 		type?: 'button' | 'submit' | 'reset' | null | undefined;
+		disabled?: boolean;
 		onclick?: EventHandler;
 	} = $props();
 	const variantClasses = {
@@ -25,6 +27,7 @@
 	class={`rounded-[.25rem] px-4 py-2 text-base sm:py-2 ${variantClasses[variant]} ${className}`}
 	{onclick}
 	{type}
+	{disabled}
 >
 	{@render children?.()}
 </button>
