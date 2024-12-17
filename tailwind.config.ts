@@ -22,21 +22,9 @@ export default {
 					300: '#97D9F6',
 					200: '#BEEAFE',
 					100: '#DBF4FF'
-				},
-				warm: {
-					900: '#1A1814',
-					800: '#413B30',
-					700: '#59544A',
-					600: '#6F695D',
-					500: '#8E897D',
-					400: '#C5C0B4',
-					300: '#E7E4DF',
-					200: '#F3F1EC',
-					100: '#FFFCF5'
 				}
 			}
 		}
 	},
-
 	plugins: []
 } satisfies Config;

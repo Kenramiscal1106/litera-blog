@@ -9,12 +9,12 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="absolute left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-warm-900 bg-opacity-25 px-4"
+		class="absolute left-0 top-0 z-50 flex h-[100lvh] w-screen items-center justify-center bg-neutral-900 bg-opacity-25 px-4"
 		onclick={() => modal.closeModal()}
 		transition:fade={{ duration: 175 }}
 	>
 		<div
-			class=" w-full max-w-md rounded-[.5rem] bg-warm-100 p-5"
+			class=" w-full max-w-md rounded-[.5rem] bg-neutral-50 p-5"
 			transition:scale={{ duration: 175, start: 0.5 }}
 			onclick={(e) => {
 				e.stopPropagation();
@@ -24,12 +24,12 @@
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="flex flex-col gap-2">
-					<div class="text-2xl font-bold text-warm-800">Help us improve!</div>
-					<div class="text-warm-600">How would you rate your website experience?</div>
+					<div class="text-2xl font-bold text-neutral-800">Help us improve!</div>
+					<div class="text-neutral-600">How would you rate your website experience?</div>
 				</div>
 				<div class="flex h-12 justify-around gap-6">
 					<div
-						class="rounded-md border-2 border-warm-300 p-1 transition-colors duration-200 has-[:checked]:border-warm-400"
+						class="rounded-md border-2 border-neutral-300 p-1 transition-colors duration-200 has-[:checked]:border-neutral-400"
 					>
 						<input type="radio" name="satisfaction" id="level-1" value="1" hidden />
 						<label for="level-1" class="">
@@ -59,7 +59,7 @@
 						</label>
 					</div>
 					<div
-						class="rounded-md border-2 border-warm-300 p-1 transition-colors duration-200 has-[:checked]:border-warm-400"
+						class="rounded-md border-2 border-neutral-300 p-1 transition-colors duration-200 has-[:checked]:border-neutral-400"
 					>
 						<input type="radio" name="satisfaction" id="level-2" value="2" hidden />
 						<label for="level-2" class="">
@@ -77,7 +77,7 @@
 						</label>
 					</div>
 					<div
-						class="rounded-md border-2 border-warm-300 p-1 transition-colors duration-200 has-[:checked]:border-warm-400"
+						class="rounded-md border-2 border-neutral-300 p-1 transition-colors duration-200 has-[:checked]:border-neutral-400"
 					>
 						<input type="radio" name="satisfaction" id="level-3" value="3" hidden />
 						<label for="level-3" class="">
@@ -95,7 +95,7 @@
 						</label>
 					</div>
 					<div
-						class="rounded-md border-2 border-warm-300 p-1 transition-colors duration-200 has-[:checked]:border-warm-400"
+						class="rounded-md border-2 border-neutral-300 p-1 transition-colors duration-200 has-[:checked]:border-neutral-400"
 					>
 						<input type="radio" name="satisfaction" id="level-4" value="4" hidden />
 						<label for="level-4" class="">
@@ -151,12 +151,18 @@
 							name="message"
 							id="message"
 							placeholder="Thoughts that you would like to share"
+							rows="4"
 						></textarea>
 					</div>
 				</div>
 				<div class="flex flex-col sm:flex-row">
-					<Button variant="outline" class="block w-full">Cancel</Button>
 					<Button variant="fill" class="block w-full">Submit</Button>
+					<Button
+						variant="outline"
+						class="block w-full"
+						type="button"
+						onclick={() => modal.closeModal()}>Cancel</Button
+					>
 				</div>
 			</form>
 		</div>
@@ -166,10 +172,10 @@
 <style>
 	input[type='text'],
 	textarea {
-		@apply block w-full rounded-md border-2 border-warm-200 bg-transparent px-4 py-2 outline-none transition-colors duration-150 hover:border-warm-300 focus:border-warm-400;
+		@apply block w-full rounded-md border-2 border-neutral-200 bg-transparent px-4 py-2 outline-none transition-colors duration-150 hover:border-neutral-300 focus:border-neutral-400;
 	}
 	input[type='radio'] + label {
-		@apply fill-warm-500 stroke-warm-500 transition-colors duration-150 hover:fill-warm-700 hover:stroke-warm-700;
+		@apply fill-neutral-500 stroke-neutral-500 transition-colors duration-150 hover:fill-neutral-700 hover:stroke-neutral-700;
 	}
 	input[hidden] {
 		dispay: none;

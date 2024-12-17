@@ -12,7 +12,7 @@
 		@apply scroll-smooth;
 	}
 	body {
-		@apply bg-warm-200;
+		@apply bg-neutral-100;
 	}
 	:root {
 		font-size:16px;
@@ -31,9 +31,6 @@
 	h1, h2, h3, h4, h5, h6 {
 		@apply 
 	} */
-	main a:not(article a) {
-		@apply text-primary-700 hover:underline;
-	}
 	h1 {
 		@apply text-4xl font-bold;
 	}
@@ -50,6 +47,23 @@
 		@apply text-base;
 	}
 	hr {
-		@apply border-2 border-warm-300 my-3;
+		@apply border-2 border-neutral-300 my-3;
+	}
+}
+@layer utilities {
+	.var-xs {
+		font-variation-settings: "opsz" 34;
+	}
+	.var-sm {
+		font-variation-settings: "opsz" 51;
+	}
+	.var-md {
+		font-variation-settings: "opsz" 61;
+	}
+	.var-lg {
+		font-variation-settings: "opsz" 66 ;
+	}
+	.var-xl {
+		font-variation-settings: "opsz" 69;
 	}
 }
