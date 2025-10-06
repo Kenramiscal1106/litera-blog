@@ -33,7 +33,6 @@
 						submitting = true;
 						return async ({ result }) => {
 							submitting = false;
-							console.log(result);
 							if (result.type === 'success') {
 								formState = 'success';
 							}
@@ -202,12 +201,12 @@
 								/>
 							</svg>
 						</div>
-						<div class="gap-3 text-center">
+						<div class="flex flex-col gap-3 text-center">
 							<h2>Your response has been recorded</h2>
 							<div>
 								<a class="underline" href="/feedback-and-suggestions"
 									>See what others say about our website</a
-								>
+								>1
 							</div>
 							<Button variant="fill" class="w-full" onclick={() => modal.closeModal()}
 								>Go back to current page</Button

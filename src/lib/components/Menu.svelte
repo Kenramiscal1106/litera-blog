@@ -14,9 +14,9 @@
 	>
 		<div class="flex justify-between px-2">
 			<div>
-				<a href="/" aria-label="home button">
+				<div aria-label="home button">
 					<img src={logo} alt="logo" class="h-9 w-auto" />
-				</a>
+				</div>
 			</div>
 			<button onclick={() => nav.closeMenu()} aria-label="Close menu"
 				><svg

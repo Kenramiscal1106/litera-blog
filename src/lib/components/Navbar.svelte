@@ -22,9 +22,9 @@
 	<div class="left-0h-full absolute top-0"></div>
 	<div class="m-auto flex max-w-3xl items-center justify-between">
 		<div>
-			<a href="/" aria-label="home button">
+			<div aria-label="home button">
 				<img src={logo} alt="logo" class="h-9 w-auto" />
-			</a>
+			</div>
 		</div>
 		<!-- Menu buttons -->
 		<div class="flex gap-4">

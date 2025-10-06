@@ -1,6 +1,6 @@
 import { Feedback } from "$lib/db";
-import { error } from "@sveltejs/kit";
-import type { Actions } from "./$types";
+import { error, redirect } from "@sveltejs/kit";
+import type { Actions, PageServerLoad } from "./$types";
 
 export const actions: Actions = {
   sendFeedback: async({request}) => {
@@ -17,4 +17,8 @@ export const actions: Actions = {
 			throw error(500, 'an error occured');
 		}
   }
+};
+
+export const load: PageServerLoad = async ({}) => {
+  redirect(301, "/blog")
 };
